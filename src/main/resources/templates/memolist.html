@@ -6,29 +6,54 @@
 </head>
 
 <style>
+    h1{
+        text-align : center;
+        margin-top : 50px;
+    }
     .layout {
-        width : 500px;
+        width : 1000px;
         margin : 0 auto;
         margin-top : 40px;
     }
+    table {
+        width : 100%;
+        border : 1px solid;
+        text-align : center;
+        border-collapse : collapse;
+    }
+    th, td {
+        border : 1px solid;
+    }
+    #number {
+        width : 10%;
+    }
+    #title {
+        width : 70%;
+    }
+    #date {
+        width : 20%;
+    }
+
 </style>
 
 <body>
+
+    <h1>개인메모장</h1>
 
     <div class="layout">
         <table>
             <thead>
                 <tr>
-                    <th>글번호</th>
-                    <th>제목</th>
+                    <th>글번호</th><th>제목</th><th>날짜</th>
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="board : ${list}">
-                    <td th:text="${board.id}">1</td>
-                    <td>
-                        <a th:text="${board.title}" th:href="@{/board/view(id=${board.id})}"></a>
+                <tr th:each="memo : ${list}">
+                    <td id="number" th:text="${memo.id}">1</td>
+                    <td id="title">
+                        <a th:text="${memo.title}" th:href="@{/memo/view(id=${memo.id})}"></a>
                     </td>
+                    <td id="date" th:text="${memo.date}"></td>
                 </tr>
             </tbody>
         </table>

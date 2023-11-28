@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성폼</title>
+</head>
+
+<style>
+    h1 {
+        text-align : center;
+        margin-top : 50px;
+    }
+    .layout {
+        width : 500px;
+        margin : 0 auto;
+        margin-top : 40px;
+    }
+    .layout input {
+        width : 100%;
+        box-size : border-box;
+    }
+    .layout textarea {
+        width : 100%;
+        margin-top : 10px;
+        min-height : 300px;
+    }
+    #file {
+        display : none;
+    }
+    .file-btn {
+        border : 1px solid;
+        width : 100%;
+        text-align : center;
+        border-radius : 3px;
+        background : gainsboro;
+        &:hover {
+            background : white;
+        }
+    }
+    button {
+        margin-top : 5px;
+        width : 100%;
+    }
+</style>
+
+<body>
+    <h1>메모작성</h1>
+    <div class="layout">
+        <form action="/memo/memoEnter" method="post" enctype="multipart/form-data">
+            <input name="title" type="text" placeholder="제목">
+            <textarea name="content" placeholder="내용"></textarea>
+            <label for="file">
+                <div class="file-btn">파일등록</div>
+            </label>
+            <input type="file" name="file" id="file"></input>
+            <button type="submit">작성</button>
+        </form>
+    </div>
+</body>
+</html>
