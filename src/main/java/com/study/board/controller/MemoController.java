@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
+@RequestMapping("/")
 public class MemoController {
     @Autowired
     private MemoService memoService;

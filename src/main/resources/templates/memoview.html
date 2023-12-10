@@ -25,7 +25,7 @@
         <p th:text="${memo.content}">내용이 들어갈 부분입니다.</p>
         <a th:href="@{${memo.filepath}}">다운받기</a>
         <a th:href="@{/memo/delete(id=${memo.id})}">글삭제</a>
-        <a th:`href="@{/memo/modify/{id}(id=${memo.id})}">글수정</a>
+        <a th:href="@{/memo/modify/{id}(id=${memo.id})}">글수정</a>
     </div>
 </body>
 </html>
