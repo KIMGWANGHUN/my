@@ -18,14 +18,19 @@
 </style>
 
 <body>
-    <h1 th:text="${memo.title}">제목입니다.</h1>
+    <!--제목-->
+    <h1 th:text="${memo.title}"></h1>
 
     <div class="contentView">
         <hr>
-        <p th:text="${memo.content}">내용이 들어갈 부분입니다.</p>
-        <a th:href="@{${memo.filepath}}">다운받기</a>
-        <a th:href="@{/memo/delete(id=${memo.id})}">글삭제</a>
-        <a th:href="@{/memo/modify/{id}(id=${memo.id})}">글수정</a>
+        <!--사진-->
+        <img th:href="@{${memo.filepath}}">
+        <!--내용-->
+        <p th:text="${memo.content}"></p>
+        <!--글삭제-->
+        <a th:href="@{/memo/delete(id=${memo.id})}">삭제</a>
+        <!--글수정-->
+        <a th:href="@{/memo/modify/{id}(id=${memo.id})}">수정</a>
     </div>
 </body>
 </html>

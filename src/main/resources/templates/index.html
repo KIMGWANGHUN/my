@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<style>
+    .EnterMemo {
+        display: grid;
+        place-items: center;
+        min-height: 100dvh;
+    }
+    .hoverDiv {
+        width : 200px;
+        height : 60px;
+        text-align : center;
+        padding-top : 20px;
+        font-size : 30px;
+        background-color : cornsilk;
+        cursor : pointer;
+        transition : 0.2s;
+    }
+    .enterBtn {
+        display : none;
+    }
+    .hoverDiv:hover .enterBtn {
+        display : block;
+        transition : 0.2s;
+    }
+    .hoverDiv:hover .inBtn {
+        display : none;
+        transition : 0.2s;
+    }
+
+
+</style>
+
 <body>
-
-<div>
-    <a th:href="@{/memo/list}">메모장</a>
+<div class="EnterMemo">
+    <div class="hoverDiv">
+        <div class="inBtn">메모하기</div>
+        <div class="enterBtn" th:href="@{/memo/list}">Click!!</div>
+    </div>
 </div>
-
 </body>
 </html>

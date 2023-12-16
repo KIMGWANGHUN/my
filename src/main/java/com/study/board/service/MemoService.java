@@ -19,7 +19,7 @@ public class MemoService {
     //글 작성
     public void write(Memo memo, MultipartFile file) throws Exception {
 
-        String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
+        String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\image";
         UUID uuid = UUID.randomUUID();
         String fileName = uuid + "_" + file.getOriginalFilename();
         File saveFile = new File(projectPath, fileName);

@@ -49,10 +49,10 @@
         <form action="/memo/memoEnter" method="post" enctype="multipart/form-data">
             <input name="title" type="text" placeholder="제목">
             <textarea name="content" placeholder="내용"></textarea>
-            <label for="file">
+            <label for="file" name="file" type="file">
                 <div class="file-btn">파일등록</div>
             </label>
-            <input type="file" name="file" id="file"></input>
+            <input type="file" name="file" id="file">
             <button type="submit">작성</button>
         </form>
     </div>

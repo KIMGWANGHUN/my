@@ -115,7 +115,7 @@
             </thead>
             <tbody>
                 <tr th:each="memo : ${list}">
-                    <td id="number" th:text="${memo.id}">1</td>
+                    <td id="number" th:text="${memo.id}"></td>
                     <td id="title">
                         <a th:text="${memo.title}" th:href="@{/memo/view(id=${memo.id})}"></a>
                     </td>
